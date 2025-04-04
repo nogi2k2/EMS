@@ -58,31 +58,38 @@ This system connects to a MySQL database and provides a user-friendly interface 
 ## 🖼️ Screenshots
 
 ### 🚀 Splash Screen
-A visually engaging startup screen built using Swing and awt event handling listeners, displayed before the login interface loads.
+**A visually engaging startup screen built using Swing and awt event handling listeners, displayed before the login interface loads.**
+
 <img src="assets/screenshots/splash_screen.png" width="700" alt="Splash Screen">
 
 ### 🔐 Login Window
-Swing components combined with AWT listeners for capturing login credentials and authenticating them against the MySQL database.
+**Swing components combined with AWT listeners for capturing login credentials and authenticating them against the MySQL database.**
+
 <img src="assets/screenshots/login.png" width="700" alt="Login Window">
 
 ### 🏠 Main Dashboard
-Central navigation window created using Swing layout managers, linking to the functionalities - adding, viewing and removing employees.
+**Central navigation window created using Swing layout managers, linking to the functionalities - adding, viewing and removing employees.**
+
 <img src="assets/screenshots/dashboard.png" width="700" alt="Main Dashboard">
 
 ### ➕ Add Employee
-Form built with text fields, combo boxes, and buttons using Swing. Captures employee details and inserts them into the database using JDBC.
+**Form built with text fields, combo boxes, and buttons using Swing. Captures employee details and inserts them into the database using JDBC.**
+
 <img src="assets/screenshots/add_employee.png" width="700" alt="Add Employee">
 
 ### 📋 View Employees
-Displays all employee records in a JTable with scroll, fetching data from the database in real time.
+**Displays all employee records in a JTable with scroll, fetching data from the database in real time.**
+
 <img src="assets/screenshots/view_employee.png" width="700" alt="View Employees">
 
 ### 📝 Update Employee
-Enables updating existing records using text fields populated from database queries, with event handling for live edits.
+**nables updating existing records using text fields populated from database queries, with event handling for live edits.**
+
 <img src="assets/screenshots/update_employee.png" width="700" alt="Update Employee">
 
 ### ❌ Remove Employee
-Provides a search field and a delete button with action listeners to remove employees based on ID.
+**Provides a search field and a delete button with action listeners to remove employees based on ID.**
+
 <img src="assets/screenshots/remove_employee.png" width="700" alt="Remove Employee">
 
 ---
