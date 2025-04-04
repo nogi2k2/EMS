@@ -48,7 +48,7 @@ public class Login extends JFrame implements ActionListener{
         imgg.setBounds(350, 10, 600, 400);
         add(imgg);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("assetts/LoginB.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("assets/LoginB.jpg"));
         Image i2 = i1.getImage().getScaledInstance(600, 300, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel img = new JLabel(i3);
@@ -70,8 +70,11 @@ public class Login extends JFrame implements ActionListener{
                 String pwd = new String(tpassword.getPassword());
 
                 Conn conn = new Conn();
-                String query = "Select * from login where username = " + usn + "and password = " + pwd;
-                ResultSet rs = conn.stmt.executeQuery(query);
+                String query = "Select * from login where username = ? and password = ?";
+                PreparedStatement pst = conn.conn.prepareStatement(query);
+                pst.setString(1, usn);
+                pst.setString(2, pwd);
+                ResultSet rs = pst.executeQuery();
 
                 if (rs.next()){
                     setVisible(false);

@@ -33,18 +33,6 @@ public class MainClass extends JFrame{
         });
         img.add(add);
 
-        remove = new JButton("Remove Employee");
-        remove.setBounds(440, 370, 150, 40);
-        remove.setBackground(Color.WHITE);
-        remove.setForeground(Color.black);
-        remove.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                new RemoveEmployee();
-            }
-        });
-        img.add(remove);
-
         view = new JButton("View Employee");
         view.setBounds(565, 270, 150, 40);
         view.setBackground(Color.WHITE);
@@ -57,6 +45,18 @@ public class MainClass extends JFrame{
             }
         });
         img.add(view);
+
+        remove = new JButton("Remove Employee");
+        remove.setBounds(440, 370, 150, 40);
+        remove.setBackground(Color.WHITE);
+        remove.setForeground(Color.black);
+        remove.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                new RemoveEmployee();
+            }
+        });
+        img.add(remove);
 
         setSize(1120, 630);
         setLocation(250, 100);

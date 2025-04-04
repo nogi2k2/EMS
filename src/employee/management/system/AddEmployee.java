@@ -33,7 +33,7 @@ public class AddEmployee extends JFrame  implements ActionListener{
         add(name);
 
         tname = new JTextField();
-        tname.setBounds(200, 150, 150, 0);
+        tname.setBounds(200, 150, 150, 30);
         tname.setBackground(new Color(177, 252, 197));
         add(tname);
 
@@ -53,17 +53,17 @@ public class AddEmployee extends JFrame  implements ActionListener{
         add(dob);
 
         tdob = new JDateChooser();
-        dob.setBounds(200, 200, 150, 30);
+        tdob.setBounds(200, 200, 150, 30);
         tdob.setBackground(new Color(177, 252, 197));
         add(tdob);
 
         JLabel salary = new JLabel("Salary");
-        salary.setBounds(400, 300, 150, 30);
+        salary.setBounds(400, 200, 150, 30);
         salary.setFont(new Font("SANS_SERIF", Font.BOLD, 20));
         add(salary);
 
         tsalary = new JTextField();
-        tsalary.setBounds(600, 300, 150, 30);
+        tsalary.setBounds(600, 200, 150, 30);
         tsalary.setBackground(new Color(177, 252, 197));
         add(tsalary);
 
@@ -83,7 +83,7 @@ public class AddEmployee extends JFrame  implements ActionListener{
         add(phone);
 
         tphone = new JTextField();
-        tphone.setBounds(650, 250, 150, 30);
+        tphone.setBounds(600, 250, 150, 30);
         tphone.setBackground(new Color(177, 252, 197));
         add(tphone);
 
@@ -139,6 +139,13 @@ public class AddEmployee extends JFrame  implements ActionListener{
         tdesignation.setBounds(200, 350, 150, 30);
         tdesignation.setBackground(new Color(177, 252, 197));
         add(tdesignation);
+        
+        back = new JButton("BACK");
+        back.setBounds(450, 550, 150, 40);
+        back.setBackground(Color.black);
+        back.setForeground(Color.WHITE);
+        back.addActionListener(this);
+        add(back);
 
         add = new JButton("ADD");
         add.setBounds(250, 550, 150, 40);
@@ -146,13 +153,6 @@ public class AddEmployee extends JFrame  implements ActionListener{
         add.setForeground(Color.WHITE);
         add.addActionListener(this);
         add(add);
-
-        back = new JButton("BACK");
-        back.setBounds(450, 550, 150, 40);
-        back.setBackground(Color.black);
-        back.setForeground(Color.WHITE);
-        back.addActionListener(this);
-        add(back);
 
         setSize(900, 700);
         setLayout(null);

@@ -37,7 +37,7 @@ public class RemoveEmployee extends JFrame implements ActionListener{
         }
 
         JLabel name = new JLabel("Name");
-        name.setBounds(20, 100, 100, 30);
+        name.setBounds(50, 100, 100, 30);
         name.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(name);
 
@@ -114,7 +114,7 @@ public class RemoveEmployee extends JFrame implements ActionListener{
         back.addActionListener(this);
         add(back);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("assets/deldete.png"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("assets/delete.png"));
         Image i2 = i1.getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel img1 = new JLabel(i3);
@@ -142,14 +142,13 @@ public class RemoveEmployee extends JFrame implements ActionListener{
                 String query = "delete from employee where empID = ?";
                 PreparedStatement pst = conn.conn.prepareStatement(query);
                 pst.setString(1, empid.getSelectedItem());
-                pst.executeQuery();
+                pst.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Employee Details Removed Successfully");
             }catch(Exception ex){
                 ex.printStackTrace();
             }
         }else if(e.getSource() == back){
             setVisible(false);
-            new MainClass();
         }
     }
 

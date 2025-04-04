@@ -28,7 +28,7 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         add(name);
 
         JLabel tname = new JLabel();
-        tname.setBounds(200, 150, 150, 0);
+        tname.setBounds(200, 150, 150, 30);
         tname.setBackground(new Color(177, 252, 197));
         add(tname);
 
@@ -53,12 +53,12 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         add(tdob);
 
         JLabel salary = new JLabel("Salary");
-        salary.setBounds(400, 300, 150, 30);
+        salary.setBounds(400, 200, 150, 30);
         salary.setFont(new Font("SANS_SERIF", Font.BOLD, 20));
         add(salary);
 
         tsalary = new JTextField();
-        tsalary.setBounds(600, 300, 150, 30);
+        tsalary.setBounds(600, 200, 150, 30);
         tsalary.setBackground(new Color(177, 252, 197));
         add(tsalary);
 
@@ -118,7 +118,7 @@ public class UpdateEmployee extends JFrame implements ActionListener{
         add(eid);
 
         JLabel tempid = new JLabel();
-        tempid.setBounds(200, 400, 150, 20);
+        tempid.setBounds(200, 400, 150, 30);
         tempid.setFont(new Font("SANS_SERIF", Font.BOLD, 20));
         tempid.setForeground(Color.RED);
         add(tempid);

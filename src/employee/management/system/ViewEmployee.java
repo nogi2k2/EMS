@@ -1,6 +1,9 @@
 package employee.management.system;
 
 import javax.swing.*;
+
+import net.proteanit.sql.DbUtils;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
@@ -43,11 +46,11 @@ public class ViewEmployee extends JFrame implements ActionListener{
             e.printStackTrace();
         }
 
-        JScrollPane jp = new JScrollPane();
+        JScrollPane jp = new JScrollPane(table);
         jp.setBounds(0, 100, 900, 600);
         add(jp);
 
-        search = new JButton("SEARCH");
+        search = new JButton("VIEW");
         search.setBounds(20, 70, 80, 20);
         search.addActionListener(this);
         add(search);
@@ -62,7 +65,7 @@ public class ViewEmployee extends JFrame implements ActionListener{
         update.addActionListener(this);
         add(update);
 
-        back = new JButton();
+        back = new JButton("BACK");
         back.setBounds(320, 70, 80, 20);
         back.addActionListener(this);
         add(back);
@@ -90,7 +93,11 @@ public class ViewEmployee extends JFrame implements ActionListener{
             setVisible(false);
             new UpdateEmployee(empid.getSelectedItem());
         }else if (e.getSource() == print){
-            table.print();
+            try{
+                table.print();
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
         }else{
             setVisible(false);
             new MainClass();
