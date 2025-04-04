@@ -67,7 +67,7 @@ public class Login extends JFrame implements ActionListener{
         if (e.getSource() == login){
             try{    
                 String usn = tusername.getText();
-                String pwd = tpassword.getPassword().toString();
+                String pwd = new String(tpassword.getPassword());
 
                 Conn conn = new Conn();
                 String query = "Select * from login where username = " + usn + "and password = " + pwd;
